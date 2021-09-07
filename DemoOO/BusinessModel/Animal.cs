@@ -11,6 +11,9 @@ namespace DemoOO.BusinessModel
         public int NumberOfLegs { get; set; }
         public string Color { get; set; }
 
+        /// <summary>
+        /// Gives the sound the animal can make
+        /// </summary>
         public abstract void MakeSound();
     }
 }
