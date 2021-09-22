@@ -53,7 +53,8 @@ bool : IndoorPet
       <w>288</w>
       <h>72</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Inherits&gt;&gt;</panel_attributes>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;Inherits&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
   <element>
@@ -64,7 +65,8 @@ bool : IndoorPet
       <w>324</w>
       <h>126</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Inherits&gt;&gt;</panel_attributes>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;Inherits&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0;160.0;50.0</additional_attributes>
   </element>
   <element>
@@ -90,7 +92,8 @@ bool : HasPedigree
       <w>234</w>
       <h>72</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Inherits&gt;&gt;</panel_attributes>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;Inherits&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
   </element>
   <element>

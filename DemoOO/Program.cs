@@ -9,31 +9,42 @@ namespace DemoOO
         static void Main()
         {
             // declare variable and set value
-            string TestVariabele = "Test";
-            List<string> lijstje = new List<string>();
+            string test = "Rob";
+            List<string> namenLijst = new();
 
             // output and debugger
-            Console.WriteLine($"Hello World! Inhoud van de string {TestVariabele}");
+            Console.WriteLine($"Hello World! Inhoud van de string {test}");
 
-           
+
             // create an instance and call the method (inheritance / globalisation / specification)
             Donkey donkey = new Donkey();
             donkey.MakeSound();
-
-            // public, private, protected
             Dog dog = new Dog();
             dog.MakeSound();
 
+            // public, private, protected
+
+
             // polymorphism & encapsulation
-            Animal animal = new Donkey();
+            Animal animal = new Dog();
             animal.MakeSound();
-            animal = new Dog();
+            animal = donkey;
             animal.MakeSound();
 
+            
+
             // association
-            Farm farm = new Farm();
-            farm.Animals = new List<Animal>();
-            farm.Animals.Add(animal);
+
+        }
+
+        public static void TestMethod(string _string)
+        {
+            _string = "Juul";
+        }
+
+        public static void TestNamenLijst(List<string> _lijst)
+        {
+            _lijst.Add("Juul");
         }
     }
 }
