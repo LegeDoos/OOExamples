@@ -18,18 +18,19 @@ Enddatetime
 MaxParticipants
 Status (registration/started/ended)
 MinimumAgeParticipants
-List&lt;Kids&gt; RegisteredParticipants
-List&lt;Kids&gt; PresentParticipants
+MaxAgeParticipants
+List&lt;Child&gt; RegisteredParticipants
+List&lt;Child&gt; PresentParticipants
 List&lt;Worker&gt; EventExecutors
 ProfessinalWorker OrganisingWorker
 -
-SubscribeEvent(Kid)
-UnsubscribeEvent(Kid)
+SubscribeEvent(Child)
+UnsubscribeEvent(Child)
 StartEvent()
 FinishEvent()
 AddEventExecutor()
 RemoveEventExecutor()
-RegisterPresentParticipant(Kid)
+RegisterPresentParticipant(Child)
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -43,7 +44,7 @@ RegisterPresentParticipant(Kid)
     </coordinates>
     <panel_attributes>Worker
 -
-List&lt;Event&gt; ExecutingEvents
+List&lt;Event&gt; EventsExecuting
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -121,7 +122,7 @@ voert uit &gt;</panel_attributes>
     </coordinates>
     <panel_attributes>ProfessionalWorker
 -
-List&lt;Event&gt; OrganisingEvents
+List&lt;Event&gt; EventsOrganising
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -170,7 +171,7 @@ List&lt;Event&gt; OrganisingEvents
     </coordinates>
     <panel_attributes>Parent
 -
-List&lt;Kid&gt; Kids</panel_attributes>
+List&lt;Child&gt; Children</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -178,14 +179,17 @@ List&lt;Kid&gt; Kids</panel_attributes>
     <coordinates>
       <x>963</x>
       <y>225</y>
-      <w>90</w>
+      <w>198</w>
       <h>117</h>
     </coordinates>
-    <panel_attributes>Kid
+    <panel_attributes>Child
 -
 Firstname
 Lastname
 Birthdate
+-
+List&lt;Event&gt; EventsRegistered
+List&lt;Event&gt; EventsPresent
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -226,7 +230,7 @@ has &gt;</panel_attributes>
     <panel_attributes>lt=-
 m1=0..n
 m2=0..n
-&lt; participates in</panel_attributes>
+&lt; registered to</panel_attributes>
     <additional_attributes>10.0;40.0;130.0;40.0;130.0;10.0</additional_attributes>
   </element>
   <element>
