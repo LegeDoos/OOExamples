@@ -1,0 +1,16 @@
+Kids Events Incorporated is een bedrijf dat zich bezig houdt met het organiseren van events voor kinderen. Events kunnen meerdaagse kampen zijn, maar ook dagactiviteiten of kinderfeestjes. Elk event heeft een organisator, een persoon die werkt voor het bedrijf. Er zijn personen in dienst van het bedrijf maar er werken ook vrijwilligers. Er is een beheerder die werknemers en vrijwilligers kan aanmaken in het systeem. 
+
+Events worden besproken met en aangemaakt door een werknemer. Die werknemer is tevens het aanspreekpunt voor de boeker van het event. Werknemers en vrijwilligers worden naar believen toegevoegd als uitvoerders van de activiteit.
+
+Ouders kunnen hun kinderen inschrijven op een event en deze inschrijvingen ook bekijken en beheren. De ouders kunnen de informatie over een event bekijken. Als het event nog niet is gestart kan een kind nog uitgeschreven worden. Kinderen die worden ingeschreven moeten aan de leeftijdsvereisten voldoen van het event.
+
+Werknemers kunnen zien welke events ze beheren. Werknemers en vrijwilligers kunnen zien welke events voor hen relevant zijn in een lijst gesorteerd op datum. Een beheerder kan ook alle events beheren.
+
+Bij de informatie die iemand kan zien over een event kun je ook zien wie zich nog meer ingeschreven heeft.
+
+Als de activiteit gestart is kan een vrijwilliger of werknemer aangeven wie aanwezig was en wie niet.
+
+
+
+
+

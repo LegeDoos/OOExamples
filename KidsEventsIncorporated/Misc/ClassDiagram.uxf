@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>657</x>
+      <y>297</y>
+      <w>216</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>Event
+-
+EventType
+Description
+Startdatetime
+Enddatetime
+MaxParticipants
+Status (registration/started/ended)
+MinimumAgeParticipants
+List&lt;Kids&gt; RegisteredParticipants
+List&lt;Kids&gt; PresentParticipants
+List&lt;Worker&gt; EventExecutors
+ProfessinalWorker OrganisingWorker
+-
+SubscribeEvent(Kid)
+UnsubscribeEvent(Kid)
+StartEvent()
+FinishEvent()
+AddEventExecutor()
+RemoveEventExecutor()
+RegisterPresentParticipant(Kid)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>297</y>
+      <w>180</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Worker
+-
+List&lt;Event&gt; ExecutingEvents
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>90</y>
+      <w>180</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>User
+-
+Username
+Password
+Firstname
+Lastname
+Email
+Status
+-
+Login()
+ResetPass()
+Block()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>405</x>
+      <y>252</y>
+      <w>81</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;Inherits&gt;&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>504</y>
+      <w>162</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+organisator &gt;</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>324</y>
+      <w>162</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1..n
+voert uit &gt;</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>468</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>ProfessionalWorker
+-
+List&lt;Event&gt; OrganisingEvents
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>639</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Beheerder</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>396</y>
+      <w>81</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;inherits&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>549</y>
+      <w>81</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;Inherits&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>936</x>
+      <y>90</y>
+      <w>135</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Parent
+-
+List&lt;Kid&gt; Kids</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>963</x>
+      <y>225</y>
+      <w>90</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Kid
+-
+Firstname
+Lastname
+Birthdate
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>144</y>
+      <w>63</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..n
+has &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>99</y>
+      <w>441</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;Inherits&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;470.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>333</y>
+      <w>153</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..n
+&lt; participates in</panel_attributes>
+    <additional_attributes>10.0;40.0;130.0;40.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>333</y>
+      <w>207</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..n
+&lt; is present</panel_attributes>
+    <additional_attributes>10.0;120.0;190.0;120.0;190.0;10.0</additional_attributes>
+  </element>
+</diagram>
