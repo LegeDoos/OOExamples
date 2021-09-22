@@ -15,14 +15,14 @@ namespace KidsEventsIncorporated.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Over KEI - Kids Events Incorporated.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contacteer ons!";
 
             return View();
         }
