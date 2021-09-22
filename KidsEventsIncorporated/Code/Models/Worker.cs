@@ -15,5 +15,8 @@ namespace KidsEventsIncorporated.Models
         /// </summary>
         public virtual ICollection<Event> EventsExecuting { get; set; }
 
+        //todo: id's met afgeleide classes
+        //todo: fk's indien ik andere naam wil
+        //todo: handleiding afmaken: https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
     }
 }
