@@ -31,7 +31,5 @@ namespace KidsEventsIncorporated.Models
         /// Events that the kid was present
         /// </summary>
         public virtual ICollection<Event> EventsPresent { get; set; }
-
-
     }
 }
