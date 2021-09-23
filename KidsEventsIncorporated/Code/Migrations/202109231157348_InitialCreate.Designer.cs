@@ -13,7 +13,7 @@ namespace KidsEventsIncorporated.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202109230457430_InitialCreate"; }
+            get { return "202109231157348_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

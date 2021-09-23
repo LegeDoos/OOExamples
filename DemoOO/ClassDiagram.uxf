@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>108</x>
-      <y>126</y>
+      <y>144</y>
       <w>396</w>
       <h>180</h>
     </coordinates>
@@ -23,7 +23,7 @@ string : MakeSound()
     <id>UMLClass</id>
     <coordinates>
       <x>738</x>
-      <y>180</y>
+      <y>198</y>
       <w>360</w>
       <h>126</h>
     </coordinates>
@@ -38,7 +38,7 @@ bool : IndoorPet
     <id>UMLClass</id>
     <coordinates>
       <x>738</x>
-      <y>360</y>
+      <y>378</y>
       <w>180</w>
       <h>54</h>
     </coordinates>
@@ -49,7 +49,7 @@ bool : IndoorPet
     <id>Relation</id>
     <coordinates>
       <x>486</x>
-      <y>162</y>
+      <y>180</y>
       <w>288</w>
       <h>72</h>
     </coordinates>
@@ -61,7 +61,7 @@ bool : IndoorPet
     <id>Relation</id>
     <coordinates>
       <x>450</x>
-      <y>288</y>
+      <y>306</y>
       <w>324</w>
       <h>126</h>
     </coordinates>
@@ -73,7 +73,7 @@ bool : IndoorPet
     <id>UMLClass</id>
     <coordinates>
       <x>1278</x>
-      <y>180</y>
+      <y>198</y>
       <w>288</w>
       <h>126</h>
     </coordinates>
@@ -88,7 +88,7 @@ bool : HasPedigree
     <id>Relation</id>
     <coordinates>
       <x>1080</x>
-      <y>198</y>
+      <y>216</y>
       <w>234</w>
       <h>72</h>
     </coordinates>
@@ -100,7 +100,7 @@ bool : HasPedigree
     <id>UMLClass</id>
     <coordinates>
       <x>108</x>
-      <y>594</y>
+      <y>612</y>
       <w>306</w>
       <h>162</h>
     </coordinates>
@@ -115,7 +115,7 @@ List&lt;Animal&gt; Animals
     <id>Relation</id>
     <coordinates>
       <x>216</x>
-      <y>288</y>
+      <y>306</y>
       <w>126</w>
       <h>342</h>
     </coordinates>
@@ -124,5 +124,28 @@ m1=0..1
 m2=0..n
 has &gt;</panel_attributes>
     <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>576</y>
+      <w>180</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Voertuig</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>306</y>
+      <w>162</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;Inherits&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

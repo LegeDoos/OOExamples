@@ -13,12 +13,12 @@ namespace KidsEventsIncorporated.Migrations
                     {
                         EventID = c.Int(nullable: false, identity: true),
                         EventType = c.Int(nullable: false),
-                        Description = c.String(),
+                        Description = c.String(maxLength: 500),
                         StartDateTime = c.DateTime(nullable: false),
                         EndDateTime = c.DateTime(nullable: false),
                         MaxParticipants = c.Int(),
                         MinumumAgeParticipants = c.Int(),
-                        MiximumAgeParticipants = c.Int(),
+                        MaximumAgeParticipants = c.Int(),
                         Status = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.EventID);
