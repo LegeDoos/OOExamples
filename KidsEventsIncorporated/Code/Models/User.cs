@@ -8,7 +8,11 @@ namespace KidsEventsIncorporated.Models
 {
     public class User
     {
-        public int UserID { get; set; }
+        /// <summary>
+        /// The unique id of a user, PK
+        /// </summary>
+        public int ID { get; set; }
+
         /// <summary>
         /// Username of the user
         /// </summary>

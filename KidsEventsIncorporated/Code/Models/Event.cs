@@ -64,18 +64,18 @@ namespace KidsEventsIncorporated.Models
         /// <summary>
         /// The registered participants 
         /// </summary>
-    //    public virtual ICollection<Child> RegisteredParticipants { get; set; }
+        public virtual ICollection<Child> Participants { get; set; }
         /// <summary>
         /// The actual present participants 
         /// </summary>
-   //     public virtual ICollection<Child> PresentParticipants { get; set; }
+   //     public virtual ICollection<Child> ParticipantsPresent { get; set; }
         /// <summary>
         /// The workers that execute the event
         /// </summary>
-   //     public virtual ICollection<Worker> EventExecutors { get; set; }
+        public virtual ICollection<Worker> EventExecutors { get; set; }
         /// <summary>
         /// The responsible organising professional worker of the event
         /// </summary>
-     //   public virtual ProfessionalWorker OrganisingWorker { get; set; }
+        public virtual ProfessionalWorker OrganisingWorker { get; set; }
     }
 }

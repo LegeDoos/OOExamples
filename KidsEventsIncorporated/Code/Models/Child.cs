@@ -36,10 +36,10 @@ namespace KidsEventsIncorporated.Models
         /// <summary>
         /// Events that the child is registered to
         /// </summary>
-        public virtual ICollection<Event> EventsRegistered{ get; set; }
+        public virtual ICollection<Event> Events{ get; set; }
         /// <summary>
         /// Events that the kid was present
         /// </summary>
-        public virtual ICollection<Event> EventsPresent { get; set; }
+      //  public virtual ICollection<Event> EventsPresent { get; set; }
     }
 }

@@ -136,6 +136,18 @@
     <Compile Include="Migrations\202109231157348_InitialCreate.Designer.cs">
       <DependentUpon>202109231157348_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109231318123_AddPersonsAndInheritance.cs" />
+    <Compile Include="Migrations\202109231318123_AddPersonsAndInheritance.Designer.cs">
+      <DependentUpon>202109231318123_AddPersonsAndInheritance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109231917061_NtoNEventParticipants.cs" />
+    <Compile Include="Migrations\202109231917061_NtoNEventParticipants.Designer.cs">
+      <DependentUpon>202109231917061_NtoNEventParticipants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109231920136_NtoNWorkersExecuting.cs" />
+    <Compile Include="Migrations\202109231920136_NtoNWorkersExecuting.Designer.cs">
+      <DependentUpon>202109231920136_NtoNWorkersExecuting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Event.cs" />
@@ -209,6 +221,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202109231157348_InitialCreate.resx">
       <DependentUpon>202109231157348_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109231318123_AddPersonsAndInheritance.resx">
+      <DependentUpon>202109231318123_AddPersonsAndInheritance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109231917061_NtoNEventParticipants.resx">
+      <DependentUpon>202109231917061_NtoNEventParticipants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109231920136_NtoNWorkersExecuting.resx">
+      <DependentUpon>202109231920136_NtoNWorkersExecuting.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
