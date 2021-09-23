@@ -58,6 +58,6 @@ namespace KidsEventsIncorporated.Models
         /// <summary>
         /// The responsible organising professional worker of the event
         /// </summary>
-    //    public virtual ProfessionalWorker OrganisingWorker { get; set; }
+     //   public virtual ProfessionalWorker OrganisingWorker { get; set; }
     }
 }
