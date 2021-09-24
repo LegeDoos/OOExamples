@@ -19,7 +19,7 @@ namespace GameAccountExample.Models
         /// <summary>
         /// Unique identifier of a game
         /// </summary>
-        [Index(IsUnique = true), StringLength(10)]
+        [Index(IsUnique = true), StringLength(10), ]
         public string GameIdentifier { get; set; }
         /// <summary>
         /// The title identifying the game

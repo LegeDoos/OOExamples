@@ -1,0 +1,50 @@
+﻿@model GameAccountExample.Models.Game
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GameIdentifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GameIdentifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinPlayers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinPlayers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxPlayers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxPlayers)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GameID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,6 +1,7 @@
 using GameAccountExample.Models;
 using System;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 
 namespace GameAccountExample.DAL
@@ -21,10 +22,11 @@ namespace GameAccountExample.DAL
         {
         }
 
-        // Add a DbSet for each entity type that you want to include in your model. For more information 
-        // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
 
-        // public virtual DbSet<MyEntity> MyEntities { get; set; }
     }
 
 
