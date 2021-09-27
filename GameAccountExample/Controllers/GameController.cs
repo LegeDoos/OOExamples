@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using GameAccountExample.DAL;
 using GameAccountExample.Models;
+using GameAccountExample.ViewModels;
 
 namespace GameAccountExample.Controllers
 {
@@ -29,12 +30,21 @@ namespace GameAccountExample.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Game game = await db.Games.FindAsync(id);
-            if (game == null)
+
+            // declareer een instantie van het viewmodel en koppel de juiste datasource
+            var playersPerGameViewModel = new PlayersPerGameViewModel();
+            playersPerGameViewModel.Game = db.Games.Where(g => g.GameID == id).Include(g => g.Users).FirstOrDefault();
+            playersPerGameViewModel.Users = playersPerGameViewModel.Game.Users;
+
+            // Docs over loading related entities
+            // https://docs.microsoft.com/en-us/ef/ef6/querying/related-data
+
+
+            if (playersPerGameViewModel.Game == null)
             {
                 return HttpNotFound();
             }
-            return View(game);
+            return View(playersPerGameViewModel);
         }
 
         // GET: Game/Create
