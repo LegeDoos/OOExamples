@@ -7,7 +7,7 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Game</h4>
+    <h4>Game "@Html.DisplayFor(model => model.Game.Title)"</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -16,14 +16,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Game.GameIdentifier)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Game.Title)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Game.Title)
         </dd>
 
         <dt>
@@ -41,6 +33,13 @@
         <dd>
             @Html.DisplayFor(model => model.Game.MaxPlayers)
         </dd>
+
+        <dt>
+            Current participants
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Game.Users.Count)
+        </dd>
     </dl>
 </div>
 
@@ -54,18 +53,24 @@
             <th>
                 @Html.DisplayNameFor(model => model.Users.FirstOrDefault().Email)
             </th>
+            <th>
+            </th>
         </tr>
 
         @foreach (var item in Model.Users)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FriendlyName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-            </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FriendlyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Remove", "RemoveUserFromGame", new { gameid = Model.Game.GameID, userid = item.UserID })
+        </td>
+
+    </tr>
         }
 
     </table>
