@@ -75,7 +75,8 @@
 
     </table>
 </div>
-        <p>
-            @Html.ActionLink("Edit", "Edit", new { id = Model.Game.GameID }) |
-            @Html.ActionLink("Back to List", "Index")
-        </p>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Game.GameID }) |
+    @Html.ActionLink("Back to List", "Index") |
+    @Html.ActionLink("Add all users to this game", "AddAllUsersToGame", new { gameid = Model.Game.GameID })
+</p>

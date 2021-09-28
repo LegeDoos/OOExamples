@@ -73,6 +73,32 @@ namespace GameAccountExample.Controllers
             return View("Details", playersPerGameViewModel);
         }
 
+        // GET: Game/RemoveUserFromGame?gameid=1&userid=1
+        public async Task<ActionResult> AddAllUsersToGame(int? gameid)
+        {
+            if (gameid == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            // declareer een instantie van het viewmodel en koppel de juiste datasource
+            var playersPerGameViewModel = new PlayersPerGameViewModel();
+            var theGame = db.Games.Where(g => g.GameID == gameid).Include(g => g.Users).FirstOrDefault();
+            // add all users
+            var allUsers = db.Users.ToList<User>();
+            theGame.Users = allUsers;
+            db.SaveChanges();
+
+            playersPerGameViewModel.Game = theGame;
+            playersPerGameViewModel.Users = playersPerGameViewModel.Game.Users;
+
+            if (playersPerGameViewModel.Game == null)
+            {
+                return HttpNotFound();
+            }
+            return View("Details", playersPerGameViewModel);
+        }
+
         // GET: Game/Create
         public ActionResult Create()
         {
