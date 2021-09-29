@@ -57,12 +57,20 @@ namespace GameAccountExample.Controllers
 
             // declareer een instantie van het viewmodel en koppel de juiste datasource
             var playersPerGameViewModel = new PlayersPerGameViewModel();
+           
+            // haal de game op uit de database (dbContext)
             var theGame = db.Games.Where(g => g.GameID == gameid).Include(g => g.Users).FirstOrDefault();
-            // remove the user from the game
+            
+            // zoek de te verwijderen gebruiker
             User userToRemove = theGame.Users.Single(u => u.UserID == userid);
+            
+            // verwijder de gebruiker uit de game
             theGame.Users.Remove(userToRemove);
+
+            // sla de wijzigingen op in de database
             db.SaveChanges();
 
+            // ga verder met het vullen van het viewmodel
             playersPerGameViewModel.Game = theGame;
             playersPerGameViewModel.Users = playersPerGameViewModel.Game.Users;
 
