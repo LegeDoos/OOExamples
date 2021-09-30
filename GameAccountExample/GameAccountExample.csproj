@@ -146,6 +146,10 @@
     <Compile Include="Migrations\202109241531475_PluralizingTableNameConvention.designer.cs">
       <DependentUpon>202109241531475_PluralizingTableNameConvention.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109291058326_AddUserAddress.cs" />
+    <Compile Include="Migrations\202109291058326_AddUserAddress.Designer.cs">
+      <DependentUpon>202109291058326_AddUserAddress.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Game.cs" />
@@ -225,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109241531475_PluralizingTableNameConvention.resx">
       <DependentUpon>202109241531475_PluralizingTableNameConvention.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109291058326_AddUserAddress.resx">
+      <DependentUpon>202109291058326_AddUserAddress.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

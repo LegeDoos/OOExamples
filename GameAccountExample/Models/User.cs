@@ -38,6 +38,16 @@ namespace GameAccountExample.Models
         [DataType(DataType.EmailAddress), DisplayName("Email address")]
         public string Email { get; set; }
         /// <summary>
+        /// Address line 1 of the user: street
+        /// </summary>
+        [StringLength(50)]
+        public string AddressLine1 { get; set; }
+        /// <summary>
+        /// Address line 2: town, postalcode
+        /// </summary>
+        [StringLength(50)]
+        public string AddressLine2 { get; set; }
+        /// <summary>
         /// The games that the user plays
         /// </summary>
         public virtual ICollection<Game> Games { get; set; }
