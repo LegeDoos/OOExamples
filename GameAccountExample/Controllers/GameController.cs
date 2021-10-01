@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using GameAccountExample.DAL;
+using GameAccountExample.Models;
+using GameAccountExample.ViewModels;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Net;
-using System.Web;
+using System.Threading.Tasks;
 using System.Web.Mvc;
-using GameAccountExample.DAL;
-using GameAccountExample.Models;
-using GameAccountExample.ViewModels;
 
 namespace GameAccountExample.Controllers
 {

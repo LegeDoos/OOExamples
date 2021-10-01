@@ -1,11 +1,9 @@
-﻿namespace GameAccountExample.Migrations
+﻿using GameAccountExample.Models;
+using System.Collections.Generic;
+using System.Data.Entity.Migrations;
+
+namespace GameAccountExample.Migrations
 {
-    using GameAccountExample.Models;
-    using System;
-    using System.Collections.Generic;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<GameAccountExample.DAL.GameAccountDbContext>
     {
@@ -17,15 +15,120 @@
         protected override void Seed(GameAccountExample.DAL.GameAccountDbContext context)
         {
             //  This method will be called after migrating to the latest version.
-            
+
+            List<User> userList = new List<User>();
+            userList.Add(new User() { UserName = "ParksA", Pass = "axiomatic", FriendlyName = "Abram Parks", Email = "flaviog@msn.com", AddressLine1 = "29 Surrey Lane", AddressLine2 = "Rolla, MO 65401" });
+            userList.Add(new User() { UserName = "YoderA", Pass = "yummy", FriendlyName = "Amanda Yoder", Email = "errxn@msn.com", AddressLine1 = "338 Fairground Ave.", AddressLine2 = "Danvers, MA 01923" });
+            userList.Add(new User() { UserName = "GainesB", Pass = "efficient", FriendlyName = "Breanna Gaines", Email = "kohlis@yahoo.ca", AddressLine1 = "85 West Iroquois Ave.", AddressLine2 = "Cantonment, FL 32533" });
+            userList.Add(new User() { UserName = "BoydZ", Pass = "hypnotic", FriendlyName = "Zain Boyd", Email = "bmidd@comcast.net", AddressLine1 = "590 Dunbar Court", AddressLine2 = "Dorchester Center, MA 02124" });
+            userList.Add(new User() { UserName = "BradfordB", Pass = "accidental", FriendlyName = "Braden Bradford", Email = "kjohnson@comcast.net", AddressLine1 = "3 S. Harrison St.", AddressLine2 = "Neenah, WI 54956" });
+            userList.Add(new User() { UserName = "VaughnC", Pass = "fantastic", FriendlyName = "Cortez Vaughn", Email = "tattooman@verizon.net", AddressLine1 = "329 Bedford Rd.", AddressLine2 = "Clinton, MD 20735" });
+            userList.Add(new User() { UserName = "AcevedoC", Pass = "acceptable", FriendlyName = "Caden Acevedo", Email = "juliano@icloud.com", AddressLine1 = "9184 S. San Carlos Court", AddressLine2 = "Willingboro, NJ 08046" });
+            userList.Add(new User() { UserName = "GutierrezO", Pass = "upbeat", FriendlyName = "Oliver Gutierrez", Email = "dmiller@yahoo.ca", AddressLine1 = "912 NE. Sycamore Street", AddressLine2 = "Grand Island, NE 68801" });
+            userList.Add(new User() { UserName = "EdwardsS", Pass = "undesirable", FriendlyName = "Sloane Edwards", Email = "parsimony@hotmail.com", AddressLine1 = "34 Saxton Ave.", AddressLine2 = "Ladson, SC 29456" });
+            userList.Add(new User() { UserName = "VillaE", Pass = "industrious", FriendlyName = "Eddie Villa", Email = "gator@aol.com", AddressLine1 = "8704 Corona Street", AddressLine2 = "Graham, NC 27253" });
+            userList.Add(new User() { UserName = "CarpenterN", Pass = "melodic", FriendlyName = "Nathaly Carpenter", Email = "gregh@yahoo.ca", AddressLine1 = "7973 Pilgrim Street", AddressLine2 = "Groton, CT 06340" });
+            userList.Add(new User() { UserName = "LindseyC", Pass = "protective", FriendlyName = "Colten Lindsey", Email = "roamer@outlook.com", AddressLine1 = "7928 Rockcrest Street", AddressLine2 = "Dacula, GA 30019" });
+            userList.Add(new User() { UserName = "EsparzaZ", Pass = "elderly", FriendlyName = "Zane Esparza", Email = "kostas@yahoo.com", AddressLine1 = "373 W. Armstrong Drive", AddressLine2 = "Rockville, MD 20850" });
+            userList.Add(new User() { UserName = "RamirezE", Pass = "malicious", FriendlyName = "Ezekiel Ramirez", Email = "bmcmahon@icloud.com", AddressLine1 = "36 Branch Drive", AddressLine2 = "Mcminnville, TN 37110" });
+            userList.Add(new User() { UserName = "YatesS", Pass = "glorious", FriendlyName = "Sarai Yates", Email = "crimsane@mac.com", AddressLine1 = "9688 Valley Farms Dr.", AddressLine2 = "Antioch, TN 37013" });
+            userList.Add(new User() { UserName = "DunlapT", Pass = "secretive", FriendlyName = "Tyrese Dunlap", Email = "jrkorson@icloud.com", AddressLine1 = "368 Fairway Drive", AddressLine2 = "Olney, MD 20832" });
+            userList.Add(new User() { UserName = "HamptonB", Pass = "plastic", FriendlyName = "Brooke Hampton", Email = "ilyaz@att.net", AddressLine1 = "7482 Primrose St.", AddressLine2 = "Asbury Park, NJ 07712" });
+            userList.Add(new User() { UserName = "BrooksL", Pass = "common", FriendlyName = "Luciano Brooks", Email = "kenja@me.com", AddressLine1 = "1 Manor St.", AddressLine2 = "Shrewsbury, MA 01545" });
+            userList.Add(new User() { UserName = "LloydJ", Pass = "perfect", FriendlyName = "Jamarion Lloyd", Email = "treit@verizon.net", AddressLine1 = "32 2nd Lane", AddressLine2 = "Elizabethtown, PA 17022" });
+            userList.Add(new User() { UserName = "GlassM", Pass = "miniature", FriendlyName = "Mila Glass", Email = "meinkej@icloud.com", AddressLine1 = "7786 Wintergreen Drive", AddressLine2 = "Scotch Plains, NJ 07076" });
+            userList.Add(new User() { UserName = "MurilloP", Pass = "cluttered", FriendlyName = "Pablo Murillo", Email = "nichoj@comcast.net", AddressLine1 = "7202 Bank Rd.", AddressLine2 = "Jersey City, NJ 07302" });
+            userList.Add(new User() { UserName = "ButlerK", Pass = "uninterested", FriendlyName = "Kailey Butler", Email = "smeier@comcast.net", AddressLine1 = "919 Branch Ave.", AddressLine2 = "Jamestown, NY 14701" });
+            userList.Add(new User() { UserName = "NorrisCa", Pass = "perpetual", FriendlyName = "Camron Norris", Email = "bastian@sbcglobal.net", AddressLine1 = "69 4th Dr.", AddressLine2 = "Johnston, RI 02919" });
+            userList.Add(new User() { UserName = "SuttonL", Pass = "reminiscent", FriendlyName = "Lia Sutton", Email = "gslondon@gmail.com", AddressLine1 = "2 East Adams St.", AddressLine2 = "Massapequa Park, NY 11762" });
+            userList.Add(new User() { UserName = "RussoM", Pass = "accessible", FriendlyName = "Miranda Russo", Email = "kwilliams@optonline.net", AddressLine1 = "19 Rockwell Dr.", AddressLine2 = "Saint Joseph, MI 49085" });
+            userList.Add(new User() { UserName = "HurleyN", Pass = "careful", FriendlyName = "Nicholas Hurley", Email = "scotfl@msn.com", AddressLine1 = "178 Locust St.", AddressLine2 = "Garland, TX 75043" });
+            userList.Add(new User() { UserName = "MasonM", Pass = "historical", FriendlyName = "Myles Mason", Email = "natepuri@mac.com", AddressLine1 = "32 Gregory St.", AddressLine2 = "Essex, MD 21221" });
+            userList.Add(new User() { UserName = "SteeleS", Pass = "romantic", FriendlyName = "Stephanie Steele", Email = "themer@live.com", AddressLine1 = "501 E. Court Street", AddressLine2 = "Lansdowne, PA 19050" });
+            userList.Add(new User() { UserName = "RamosR", Pass = "youthful", FriendlyName = "Ramon Ramos", Email = "wortmanj@yahoo.com", AddressLine1 = "937 Arch Rd.", AddressLine2 = "Duarte, CA 91010" });
+            userList.Add(new User() { UserName = "WhiteheadT", Pass = "flaky", FriendlyName = "Theodore Whitehead", Email = "british@live.com", AddressLine1 = "8288 Mill Court", AddressLine2 = "Addison, IL 60101" });
+            userList.Add(new User() { UserName = "ChangR", Pass = "meaty", FriendlyName = "Rogelio Chang", Email = "ismail@icloud.com", AddressLine1 = "781 Branch Dr.", AddressLine2 = "Enterprise, AL 36330" });
+            userList.Add(new User() { UserName = "FischerR", Pass = "uppity", FriendlyName = "Randy Fischer", Email = "marin@verizon.net", AddressLine1 = "26 Annadale Drive", AddressLine2 = "Shakopee, MN 55379" });
+            userList.Add(new User() { UserName = "BaxterA", Pass = "stereotyped", FriendlyName = "Alexa Baxter", Email = "munjal@me.com", AddressLine1 = "9269 E. Hickory St.", AddressLine2 = "Oak Creek, WI 53154" });
+            userList.Add(new User() { UserName = "PughK", Pass = "willing", FriendlyName = "Kennedi Pugh", Email = "konst@gmail.com", AddressLine1 = "22 Glen Eagles Lane", AddressLine2 = "Rockaway, NJ 07866" });
+            userList.Add(new User() { UserName = "DickersonJ", Pass = "resonant", FriendlyName = "Jovany Dickerson", Email = "lamprecht@icloud.com", AddressLine1 = "548 Chestnut Lane", AddressLine2 = "Buford, GA 30518" });
+            userList.Add(new User() { UserName = "MaloneJ", Pass = "maddening", FriendlyName = "Jorge Malone", Email = "tedrlord@yahoo.com", AddressLine1 = "7341 4th Rd.", AddressLine2 = "Herndon, VA 20170" });
+            userList.Add(new User() { UserName = "ElliottM", Pass = "adhesive", FriendlyName = "Markus Elliott", Email = "pierce@live.com", AddressLine1 = "684 Canal St.", AddressLine2 = "Southampton, PA 18966" });
+            userList.Add(new User() { UserName = "DillonM", Pass = "ahead", FriendlyName = "Melissa Dillon", Email = "oechslin@att.net", AddressLine1 = "29 Fieldstone Dr.", AddressLine2 = "Urbandale, IA 50322" });
+            userList.Add(new User() { UserName = "MatthewsD", Pass = "scared", FriendlyName = "Daniela Matthews", Email = "sblack@me.com", AddressLine1 = "9376 William Drive", AddressLine2 = "Hazleton, PA 18201" });
+            userList.Add(new User() { UserName = "LeblancL", Pass = "giddy", FriendlyName = "Leonidas Leblanc", Email = "jramio@yahoo.ca", AddressLine1 = "7919 Carson St.", AddressLine2 = "Marion, NC 28752" });
+            userList.Add(new User() { UserName = "BeanM", Pass = "unwieldy", FriendlyName = "Miranda Bean", Email = "sjava@aol.com", AddressLine1 = "8744 Vale Drive", AddressLine2 = "Greenville, NC 27834" });
+            userList.Add(new User() { UserName = "WatsonA", Pass = "permissible", FriendlyName = "Angelina Watson", Email = "joglo@verizon.net", AddressLine1 = "9165 Clark St.", AddressLine2 = "Southington, CT 06489" });
+            userList.Add(new User() { UserName = "DixonM", Pass = "doubtful", FriendlyName = "Melody Dixon", Email = "hyper@att.net", AddressLine1 = "9245 Linden St.", AddressLine2 = "Uniondale, NY 11553" });
+            userList.Add(new User() { UserName = "KingA", Pass = "thoughtless", FriendlyName = "Aleah King", Email = "pmint@yahoo.com", AddressLine1 = "8871 Plumb Branch Street", AddressLine2 = "Torrance, CA 90505" });
+            userList.Add(new User() { UserName = "CervantesR", Pass = "naughty", FriendlyName = "Ronan Cervantes", Email = "sassen@live.com", AddressLine1 = "24 Campfire Rd.", AddressLine2 = "Ithaca, NY 14850" });
+            userList.Add(new User() { UserName = "MosleyA", Pass = "disastrous", FriendlyName = "Amare Mosley", Email = "alhajj@msn.com", AddressLine1 = "598 Gainsway Street", AddressLine2 = "Zionsville, IN 46077" });
+            userList.Add(new User() { UserName = "DillonT", Pass = "numberless", FriendlyName = "Tyrone Dillon", Email = "muadip@gmail.com", AddressLine1 = "19 Lawrence Ave.", AddressLine2 = "Elkridge, MD 21075" });
+            userList.Add(new User() { UserName = "BlakeT", Pass = "natural", FriendlyName = "Trenton Blake", Email = "keutzer@verizon.net", AddressLine1 = "7404 Redwood St.", AddressLine2 = "Powell, TN 37849" });
+            userList.Add(new User() { UserName = "MorrisonK", Pass = "ratty", FriendlyName = "Kenneth Morrison", Email = "yxing@optonline.net", AddressLine1 = "978 Sherman Dr.", AddressLine2 = "Alexandria, VA 22304" });
+            userList.Add(new User() { UserName = "KramerN", Pass = "bloody", FriendlyName = "Nathaniel Kramer", Email = "sblack@sbcglobal.net", AddressLine1 = "1 Brookside Dr.", AddressLine2 = "Calumet City, IL 60409" });
+            userList.Add(new User() { UserName = "OwenJ", Pass = "unhealthy", FriendlyName = "John Owen", Email = "dburrows@optonline.net", AddressLine1 = "86 Orange St.", AddressLine2 = "Riverview, FL 33569" });
+            userList.Add(new User() { UserName = "TownsendR", Pass = "sharp", FriendlyName = "Reese Townsend", Email = "klaudon@gmail.com", AddressLine1 = "50 Bellevue Street", AddressLine2 = "Deerfield Beach, FL 33442" });
+            userList.Add(new User() { UserName = "VillanuevaR", Pass = "versed", FriendlyName = "Ricky Villanueva", Email = "dbindel@gmail.com", AddressLine1 = "2 10th St.", AddressLine2 = "Birmingham, AL 35209" });
+            userList.Add(new User() { UserName = "PetersonR", Pass = "gigantic", FriendlyName = "Rayne Peterson", Email = "paley@me.com", AddressLine1 = "459 Rockwell Street", AddressLine2 = "Corona, NY 11368" });
+            userList.Add(new User() { UserName = "McdowellG", Pass = "poor", FriendlyName = "Gracie Mcdowell", Email = "zavadsky@comcast.net", AddressLine1 = "935 Prospect Ave.", AddressLine2 = "Yorktown, VA 23693" });
+            userList.Add(new User() { UserName = "HenryJ", Pass = "deeply", FriendlyName = "Jordyn Henry", Email = "warrior@sbcglobal.net", AddressLine1 = "153 Clinton Lane", AddressLine2 = "Pembroke Pines, FL 33028" });
+            userList.Add(new User() { UserName = "NorrisC", Pass = "careless", FriendlyName = "Corbin Norris", Email = "yumpy@yahoo.ca", AddressLine1 = "547 SW. Purple Finch Rd.", AddressLine2 = "Fall River, MA 02720" });
+            userList.Add(new User() { UserName = "RosalesC", Pass = "vague", FriendlyName = "Charlie Rosales", Email = "jginspace@att.net", AddressLine1 = "3 Bradford Street", AddressLine2 = "San Lorenzo, CA 94580" });
+            userList.Add(new User() { UserName = "MoraA", Pass = "wandering", FriendlyName = "Angeline Mora", Email = "yxing@yahoo.com", AddressLine1 = "92 Heather Street", AddressLine2 = "East Elmhurst, NY 11369" });
+            userList.Add(new User() { UserName = "SellersA", Pass = "super", FriendlyName = "Armani Sellers", Email = "kuparine@comcast.net", AddressLine1 = "9368 Pilgrim Ave.", AddressLine2 = "Germantown, MD 20874" });
+            userList.Add(new User() { UserName = "FisherJ", Pass = "jittery", FriendlyName = "Janiyah Fisher", Email = "dburrows@outlook.com", AddressLine1 = "924 Cedar Swamp Ave.", AddressLine2 = "Garden City, NY 11530" });
+            userList.Add(new User() { UserName = "CharlesC", Pass = "direful", FriendlyName = "Cory Charles", Email = "themer@msn.com", AddressLine1 = "737 Pawnee Road", AddressLine2 = "Duluth, GA 30096" });
+            userList.Add(new User() { UserName = "HancockM", Pass = "smooth", FriendlyName = "Mikaela Hancock", Email = "tskirvin@msn.com", AddressLine1 = "7330 Marsh St.", AddressLine2 = "Pawtucket, RI 02860" });
+            userList.Add(new User() { UserName = "BanksL", Pass = "flowery", FriendlyName = "Lamont Banks", Email = "cisugrad@optonline.net", AddressLine1 = "9825 Circle St.", AddressLine2 = "Benton Harbor, MI 49022" });
+            userList.Add(new User() { UserName = "MillsE", Pass = "few", FriendlyName = "Erick Mills", Email = "jaffe@icloud.com", AddressLine1 = "10 St Louis Avenue", AddressLine2 = "Holly Springs, NC 27540" });
+            userList.Add(new User() { UserName = "OrtegaB", Pass = "ambitious", FriendlyName = "Brooklyn Ortega", Email = "thaljef@icloud.com", AddressLine1 = "218 Howard Dr.", AddressLine2 = "Lynn, MA 01902" });
+            userList.Add(new User() { UserName = "NguyenS", Pass = "flimsy", FriendlyName = "Sergio Nguyen", Email = "rafasgj@outlook.com", AddressLine1 = "9274 Rockville Street", AddressLine2 = "Longview, TX 75604" });
+            userList.Add(new User() { UserName = "HaleQ", Pass = "awake", FriendlyName = "Quentin Hale", Email = "yzheng@yahoo.com", AddressLine1 = "9595 S. Edgewood St.", AddressLine2 = "Henrico, VA 23228" });
+            userList.Add(new User() { UserName = "McknightL", Pass = "debonair", FriendlyName = "Lance Mcknight", Email = "webinc@optonline.net", AddressLine1 = "9145 Lancaster Ave.", AddressLine2 = "Simpsonville, SC 29680" });
+            userList.Add(new User() { UserName = "RichmondA", Pass = "chubby", FriendlyName = "Adan Richmond", Email = "ghaviv@me.com", AddressLine1 = "7997 NW. Fulton St.", AddressLine2 = "Virginia Beach, VA 23451" });
+            userList.Add(new User() { UserName = "OliverT", Pass = "steady", FriendlyName = "Taylor Oliver", Email = "andrewik@yahoo.ca", AddressLine1 = "651 West Pin Oak Court", AddressLine2 = "Apopka, FL 32703" });
+            userList.Add(new User() { UserName = "BoyleG", Pass = "impossible", FriendlyName = "German Boyle", Email = "ranasta@msn.com", AddressLine1 = "33 York Lane", AddressLine2 = "Roslindale, MA 02131" });
+            userList.Add(new User() { UserName = "GlassE", Pass = "entertaining", FriendlyName = "Ellen Glass", Email = "quantaman@yahoo.com", AddressLine1 = "9718 Westport St.", AddressLine2 = "Terre Haute, IN 47802" });
+            userList.Add(new User() { UserName = "GatesM", Pass = "trite", FriendlyName = "Mitchell Gates", Email = "sassen@icloud.com", AddressLine1 = "56 Sugar Court", AddressLine2 = "Savannah, GA 31404" });
+            userList.Add(new User() { UserName = "HurleyD", Pass = "aback", FriendlyName = "Diamond Hurley", Email = "raines@comcast.net", AddressLine1 = "8614 Brewery Lane", AddressLine2 = "Nottingham, MD 21236" });
+            userList.Add(new User() { UserName = "TerrellJ", Pass = "idiotic", FriendlyName = "Jaelynn Terrell", Email = "hakim@comcast.net", AddressLine1 = "565 South Henry Smith St.", AddressLine2 = "Norwich, CT 06360" });
+            userList.Add(new User() { UserName = "VelazquezM", Pass = "pricey", FriendlyName = "Moriah Velazquez", Email = "dobey@icloud.com", AddressLine1 = "1 Windsor Rd.", AddressLine2 = "Kearny, NJ 07032" });
+            userList.Add(new User() { UserName = "RowlandJ", Pass = "burly", FriendlyName = "Julissa Rowland", Email = "citizenl@gmail.com", AddressLine1 = "790 N. Gainsway St.", AddressLine2 = "Canyon Country, CA 91387" });
+            userList.Add(new User() { UserName = "KnappG", Pass = "tacky", FriendlyName = "Gary Knapp", Email = "jadavis@hotmail.com", AddressLine1 = "57 Windsor Street", AddressLine2 = "Taunton, MA 02780" });
+            userList.Add(new User() { UserName = "HayesC", Pass = "pink", FriendlyName = "Caitlin Hayes", Email = "skythe@mac.com", AddressLine1 = "7633 Roosevelt Street", AddressLine2 = "Mount Holly, NJ 08060" });
+            userList.Add(new User() { UserName = "McbrideA", Pass = "defeated", FriendlyName = "Ava Mcbride", Email = "isaacson@icloud.com", AddressLine1 = "259 Bayport Drive", AddressLine2 = "New York, NY 10002" });
+            userList.Add(new User() { UserName = "BarajasA", Pass = "huge", FriendlyName = "Antwan Barajas", Email = "flavell@hotmail.com", AddressLine1 = "60 Mechanic Street", AddressLine2 = "Los Angeles, CA 90008" });
+            userList.Add(new User() { UserName = "PotterJ", Pass = "guarded", FriendlyName = "Jakobe Potter", Email = "manuals@yahoo.ca", AddressLine1 = "8786 Race Rd.", AddressLine2 = "Sewell, NJ 08080" });
+            userList.Add(new User() { UserName = "TaylorJ", Pass = "old", FriendlyName = "Jay Taylor", Email = "reziac@yahoo.com", AddressLine1 = "7797 Vale Lane", AddressLine2 = "Milton, MA 02186" });
+            userList.Add(new User() { UserName = "AriasE", Pass = "anxious", FriendlyName = "Emilia Arias", Email = "iapetus@verizon.net", AddressLine1 = "779 Taylor St.", AddressLine2 = "Londonderry, NH 03053" });
+            userList.Add(new User() { UserName = "NicholsL", Pass = "secret", FriendlyName = "Londyn Nichols", Email = "sabren@live.com", AddressLine1 = "33 N. Hamilton Street", AddressLine2 = "New Baltimore, MI 48047" });
+            userList.Add(new User() { UserName = "HesterA", Pass = "crooked", FriendlyName = "Alison Hester", Email = "clkao@hotmail.com", AddressLine1 = "99 Valley Drive", AddressLine2 = "Wayne, NJ 07470" });
+            userList.Add(new User() { UserName = "KiddA", Pass = "dry", FriendlyName = "Alijah Kidd", Email = "mrsam@msn.com", AddressLine1 = "474 E. Campfire Street", AddressLine2 = "Mchenry, IL 60050" });
+            userList.Add(new User() { UserName = "GatesS", Pass = "tiny", FriendlyName = "Skylar Gates", Email = "dwendlan@verizon.net", AddressLine1 = "8038 Bald Hill Road", AddressLine2 = "Soddy Daisy, TN 37379" });
+            userList.Add(new User() { UserName = "SheaN", Pass = "curious", FriendlyName = "Nadia Shea", Email = "jwarren@live.com", AddressLine1 = "42 Church Ave.", AddressLine2 = "Onalaska, WI 54650" });
+            userList.Add(new User() { UserName = "SuarezE", Pass = "neighborly", FriendlyName = "Edwin Suarez", Email = "spadkins@comcast.net", AddressLine1 = "97 Augusta Lane", AddressLine2 = "Upland, CA 91784" });
+            userList.Add(new User() { UserName = "MaysJ", Pass = "large", FriendlyName = "Jaden Mays", Email = "delpino@outlook.com", AddressLine1 = "836 Foxrun Dr.", AddressLine2 = "Wadsworth, OH 44281" });
+            userList.Add(new User() { UserName = "ShawS", Pass = "green", FriendlyName = "Selena Shaw", Email = "bartak@yahoo.com", AddressLine1 = "9594 Sunset Drive", AddressLine2 = "Charlottesville, VA 22901" });
+            userList.Add(new User() { UserName = "EnglishL", Pass = "drunk", FriendlyName = "Laney English", Email = "cantu@live.com", AddressLine1 = "8777 Queen Street", AddressLine2 = "Baldwinsville, NY 13027" });
+            userList.Add(new User() { UserName = "HorneS", Pass = "right", FriendlyName = "Santos Horne", Email = "graham@icloud.com", AddressLine1 = "52 Bow Ridge Drive", AddressLine2 = "Cedar Falls, IA 50613" });
+            userList.Add(new User() { UserName = "MaxwellC", Pass = "godly", FriendlyName = "Craig Maxwell", Email = "damian@att.net", AddressLine1 = "8 South Rockland St.", AddressLine2 = "Venice, FL 34293" });
+            userList.Add(new User() { UserName = "WallD", Pass = "parallel", FriendlyName = "Delaney Wall", Email = "bigmauler@aol.com", AddressLine1 = "284 Golf Drive", AddressLine2 = "Fredericksburg, VA 22405" });
+            userList.Add(new User() { UserName = "WalterE", Pass = "closed", FriendlyName = "Eduardo Walter", Email = "lipeng@optonline.net", AddressLine1 = "11 Applegate St.", AddressLine2 = "West Orange, NJ 07052" });
+            userList.Add(new User() { UserName = "HermanD", Pass = "momentous", FriendlyName = "Darion Herman", Email = "carroll@sbcglobal.net", AddressLine1 = "9023 S. Hilltop St.", AddressLine2 = "Hopkinsville, KY 42240" });
+            userList.Add(new User() { UserName = "OrtegaE", Pass = "outgoing", FriendlyName = "Easton Ortega", Email = "biglou@att.net", AddressLine1 = "77 West Grant Street", AddressLine2 = "Brick, NJ 08723" });
+
+            context.Users.AddOrUpdate(u => u.UserName, userList.ToArray());
+
             Game GameOne = new Game()
             {
                 Title = "Gotcha Zuyd!",
                 GameIdentifier = "ZUYD",
                 MinPlayers = 10,
-                MaxPlayers = 500
+                MaxPlayers = 500,
+                Users = userList
             };
-            
+
             Game GameTwo = new Game()
             {
                 Title = "Gotcha Zuyd Teachers",
@@ -35,16 +138,6 @@
             };
 
             context.Games.AddOrUpdate(g => g.GameIdentifier, GameOne, GameTwo);
-
-            List<Game> games = new List<Game>();
-            games.Add(GameOne);
-
-            context.Users.AddOrUpdate(u => u.UserName, 
-                new User() { UserName = "user1", Pass = "secret", FriendlyName = "User 1", Email = "user1@users.com", Games = games },
-                new User() { UserName = "user2", Pass = "secret", FriendlyName = "User 2", Email = "user2@users.com", Games = games },
-                new User() { UserName = "user3", Pass = "secret", FriendlyName = "User 3", Email = "user3@users.com" },
-                new User() { UserName = "user4", Pass = "secret", FriendlyName = "User 4", Email = "user4@users.com" },
-                new User() { UserName = "pietsnot", Pass = "secret", FriendlyName = "Piet Snot", Email = "piet@snot.nl.com" });
 
             base.Seed(context);
         }
