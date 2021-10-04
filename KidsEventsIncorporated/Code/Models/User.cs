@@ -24,7 +24,7 @@ namespace KidsEventsIncorporated.Models
         /// </summary>
         [DataType(DataType.Password)]
         [Required]
-        public string Password { get; set; }
+        public string Pass { get; set; }
         /// <summary>
         /// Real firstname of the user
         /// </summary>
@@ -35,6 +35,16 @@ namespace KidsEventsIncorporated.Models
         /// </summary>
         [StringLength(50)]
         public string Lastname { get; set; }
+        /// <summary>
+        /// Address line 1 of the user: street
+        /// </summary>
+        [StringLength(50)]
+        public string AddressLine1 { get; set; }
+        /// <summary>
+        /// Address line 2: town, postalcode
+        /// </summary>
+        [StringLength(50)]
+        public string AddressLine2 { get; set; }
         /// <summary>
         /// Email address of the user
         /// </summary>

@@ -148,6 +148,10 @@
     <Compile Include="Migrations\202109231920136_NtoNWorkersExecuting.Designer.cs">
       <DependentUpon>202109231920136_NtoNWorkersExecuting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110041632290_ChangesToUser.cs" />
+    <Compile Include="Migrations\202110041632290_ChangesToUser.Designer.cs">
+      <DependentUpon>202110041632290_ChangesToUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Event.cs" />
@@ -230,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109231920136_NtoNWorkersExecuting.resx">
       <DependentUpon>202109231920136_NtoNWorkersExecuting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110041632290_ChangesToUser.resx">
+      <DependentUpon>202110041632290_ChangesToUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
