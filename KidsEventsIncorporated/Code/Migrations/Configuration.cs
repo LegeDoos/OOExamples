@@ -32,11 +32,37 @@ namespace KidsEventsIncorporated.Migrations
             userList.Add(new ProfessionalWorker() { Username = "EsparzaZ", Pass = "elderly", Lastname = "Zane Esparza", Email = "kostas@yahoo.com", AddressLine1 = "373 W. Armstrong Drive", AddressLine2 = "Rockville, MD 20850" });
             userList.Add(new ProfessionalWorker() { Username = "RamirezE", Pass = "malicious", Lastname = "Ezekiel Ramirez", Email = "bmcmahon@icloud.com", AddressLine1 = "36 Branch Drive", AddressLine2 = "Mcminnville, TN 37110" });
             userList.Add(new ProfessionalWorker() { Username = "YatesS", Pass = "glorious", Lastname = "Sarai Yates", Email = "crimsane@mac.com", AddressLine1 = "9688 Valley Farms Dr.", AddressLine2 = "Antioch, TN 37013" });
-            userList.Add(new Parent() { Username = "GlassM", Pass = "miniature", Lastname = "Mila Glass", Email = "meinkej@icloud.com", AddressLine1 = "7786 Wintergreen Drive", AddressLine2 = "Scotch Plains, NJ 07076" });
 
-            userList.Add(new Parent() { Username = "ParksA", Pass = "axiomatic", Lastname = "Abram Parks", Email = "flaviog@msn.com", AddressLine1 = "29 Surrey Lane", AddressLine2 = "Rolla, MO 65401" });
-            userList.Add(new Parent() { Username = "YoderA", Pass = "yummy", Lastname = "Amanda Yoder", Email = "errxn@msn.com", AddressLine1 = "338 Fairground Ave.", AddressLine2 = "Danvers, MA 01923" });
-            userList.Add(new Parent() { Username = "GainesB", Pass = "efficient", Lastname = "Breanna Gaines", Email = "kohlis@yahoo.ca", AddressLine1 = "85 West Iroquois Ave.", AddressLine2 = "Cantonment, FL 32533" });
+            var childrenList = new List<Child>();
+            childrenList.Add(new Child() { Firstname = "Mika", LastName = "Glass", BirthDate = DateTime.Now.AddDays(365 * -5).Date });
+            childrenList.Add(new Child() { Firstname = "Laura", LastName = "Glass", BirthDate = DateTime.Now.AddDays(365 * -7).Date });
+            userList.Add(new Parent() { Username = "GlassM", Pass = "miniature", Lastname = "Mila Glass", Email = "meinkej@icloud.com", AddressLine1 = "7786 Wintergreen Drive", AddressLine2 = "Scotch Plains, NJ 07076", Children = childrenList.ToList()});
+
+            childrenList = new List<Child>();
+            childrenList.Add(new Child() { Firstname = "Jolene", LastName = "Parks", BirthDate = DateTime.Now.AddDays(365 * -4).Date });
+            childrenList.Add(new Child() { Firstname = "Don", LastName = "Parks", BirthDate = DateTime.Now.AddDays(365 * -6).Date });
+            childrenList.Add(new Child() { Firstname = "Peter", LastName = "Parks", BirthDate = DateTime.Now.AddDays(365 * -10).Date });
+            childrenList.Add(new Child() { Firstname = "Anna", LastName = "Parks", BirthDate = DateTime.Now.AddDays(365 * -12).Date });
+            userList.Add(new Parent() { Username = "ParksA", Pass = "axiomatic", Lastname = "Abram Parks", Email = "flaviog@msn.com", AddressLine1 = "29 Surrey Lane", AddressLine2 = "Rolla, MO 65401", Children = childrenList.ToList() });
+
+            childrenList = new List<Child>();
+            childrenList.Add(new Child() { Firstname = "Eline", LastName = "Yoder", BirthDate = DateTime.Now.AddDays(365 * -7).Date });
+            childrenList.Add(new Child() { Firstname = "Laurel", LastName = "Yoder", BirthDate = DateTime.Now.AddDays(365 * -11).Date });
+            userList.Add(new Parent() { Username = "YoderA", Pass = "yummy", Lastname = "Amanda Yoder", Email = "errxn@msn.com", AddressLine1 = "338 Fairground Ave.", AddressLine2 = "Danvers, MA 01923", Children = childrenList.ToList() });
+
+            childrenList = new List<Child>();
+            childrenList.Add(new Child() { Firstname = "Beth", LastName = "Gaines", BirthDate = DateTime.Now.AddDays(365 * -15).Date });
+            childrenList.Add(new Child() { Firstname = "Jasmine", LastName = "Gaines", BirthDate = DateTime.Now.AddDays(365 * -14).Date });
+            childrenList.Add(new Child() { Firstname = "Gloria", LastName = "Gaines", BirthDate = DateTime.Now.AddDays(365 * -13).Date });
+            childrenList.Add(new Child() { Firstname = "Hilary", LastName = "Gaines", BirthDate = DateTime.Now.AddDays(365 * -12).Date });
+            childrenList.Add(new Child() { Firstname = "Vin", LastName = "Gaines", BirthDate = DateTime.Now.AddDays(365 * -11).Date });
+            childrenList.Add(new Child() { Firstname = "Elroy", LastName = "Gaines", BirthDate = DateTime.Now.AddDays(365 * -10).Date });
+            childrenList.Add(new Child() { Firstname = "Jake", LastName = "Gaines", BirthDate = DateTime.Now.AddDays(365 * -9).Date });
+            childrenList.Add(new Child() { Firstname = "Peter", LastName = "Gaines", BirthDate = DateTime.Now.AddDays(365 * -7).Date });
+            childrenList.Add(new Child() { Firstname = "Jess", LastName = "Gaines", BirthDate = DateTime.Now.AddDays(365 * -6).Date });
+            childrenList.Add(new Child() { Firstname = "Claire", LastName = "Gaines", BirthDate = DateTime.Now.AddDays(365 * -3).Date });
+            userList.Add(new Parent() { Username = "GainesB", Pass = "efficient", Lastname = "Breanna Gaines", Email = "kohlis@yahoo.ca", AddressLine1 = "85 West Iroquois Ave.", AddressLine2 = "Cantonment, FL 32533", Children = childrenList.ToList() });
+          
             userList.Add(new Parent() { Username = "BoydZ", Pass = "hypnotic", Lastname = "Zain Boyd", Email = "bmidd@comcast.net", AddressLine1 = "590 Dunbar Court", AddressLine2 = "Dorchester Center, MA 02124" });
             userList.Add(new Parent() { Username = "BradfordB", Pass = "accidental", Lastname = "Braden Bradford", Email = "kjohnson@comcast.net", AddressLine1 = "3 S. Harrison St.", AddressLine2 = "Neenah, WI 54956" });
             userList.Add(new Parent() { Username = "MurilloP", Pass = "cluttered", Lastname = "Pablo Murillo", Email = "nichoj@comcast.net", AddressLine1 = "7202 Bank Rd.", AddressLine2 = "Jersey City, NJ 07302" });
@@ -120,6 +146,13 @@ namespace KidsEventsIncorporated.Migrations
             userList.Add(new Parent() { Username = "HermanD", Pass = "momentous", Lastname = "Darion Herman", Email = "carroll@sbcglobal.net", AddressLine1 = "9023 S. Hilltop St.", AddressLine2 = "Hopkinsville, KY 42240" });
             userList.Add(new Parent() { Username = "OrtegaE", Pass = "outgoing", Lastname = "Easton Ortega", Email = "biglou@att.net", AddressLine1 = "77 West Grant Street", AddressLine2 = "Brick, NJ 08723" });
 
+            foreach (var user in userList.Where(u => string.IsNullOrEmpty(u.Firstname) ))
+            {
+                var name = user.Lastname.Split(' ');
+                user.Firstname = name[0];
+                user.Lastname = name[1];
+            }
+            context.Childs.AddOrUpdate(c => new { c.LastName, c.BirthDate }, childrenList.ToArray());
             context.Users.AddOrUpdate(u => u.Username, userList.ToArray());
 
         }

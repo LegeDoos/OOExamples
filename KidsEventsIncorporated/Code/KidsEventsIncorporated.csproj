@@ -152,6 +152,10 @@
     <Compile Include="Migrations\202110041632290_ChangesToUser.Designer.cs">
       <DependentUpon>202110041632290_ChangesToUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110060913574_ChangeEventChildRelation.cs" />
+    <Compile Include="Migrations\202110060913574_ChangeEventChildRelation.Designer.cs">
+      <DependentUpon>202110060913574_ChangeEventChildRelation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\Event.cs" />
@@ -237,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110041632290_ChangesToUser.resx">
       <DependentUpon>202110041632290_ChangesToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110060913574_ChangeEventChildRelation.resx">
+      <DependentUpon>202110060913574_ChangeEventChildRelation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

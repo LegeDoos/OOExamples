@@ -176,9 +176,9 @@ namespace GameAccountExample.Controllers
         // POST: Game/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public async Task<ActionResult> DeleteConfirmed(int gameid)
         {
-            Game game = await db.Games.FindAsync(id);
+            Game game = await db.Games.FindAsync(gameid);
             db.Games.Remove(game);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

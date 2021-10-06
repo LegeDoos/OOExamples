@@ -19,6 +19,7 @@ namespace KidsEventsIncorporated.DAL
 
         public DbSet<Event> Events { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Child> Childs { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
