@@ -4,23 +4,33 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>190</x>
+      <x>120</x>
       <y>120</y>
-      <w>170</w>
-      <h>90</h>
+      <w>340</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>Game
 -
-Users: List&lt;User&gt;</panel_attributes>
++int GameID
++string GameIdentifier
++string Title
++int MinPlayers
++int MaxPlayers
++List&lt;User&gt; Users
+-
++bool AddUsersToGame(List&lt;User&gt; _users)
++bool StartGame()
+-bool CreateContracts
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>550</x>
+      <x>660</x>
       <y>120</y>
       <w>180</w>
-      <h>90</h>
+      <h>220</h>
     </coordinates>
     <panel_attributes>User
 -
@@ -30,15 +40,15 @@ Games: List&lt;Game&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
+      <x>450</x>
       <y>150</y>
-      <w>220</w>
+      <w>230</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..n
 m2=0..n
 &lt; plays</panel_attributes>
-    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
   </element>
 </diagram>
