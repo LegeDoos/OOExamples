@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace UnitTest
 {
     [TestClass]
-    public class GameModelTest
+    public class GameTests
     {
         [TestMethod]
         public void TestHappyFlowAdd()
@@ -34,7 +34,7 @@ namespace UnitTest
         }
 
         [TestMethod]
-        public void AddToManyParticipants()
+        public void AddTooManyParticipants()
         {
             // arrange
             Game theGame = new Game();
