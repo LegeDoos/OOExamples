@@ -60,5 +60,6 @@ namespace GameAccountExample.Models
             }
             return true;
         }
+
     }
 }
