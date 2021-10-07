@@ -37,5 +37,28 @@ namespace GameAccountExample.Models
         /// List of users that play the game
         /// </summary>
         public ICollection<User> Users { get; set; }
+
+        /// <summary>
+        /// Add the users from the list to the game if conditions are met
+        /// </summary>
+        /// <param name="_users">The list of users to add</param>
+        /// <returns>true on success</returns>
+        public bool AddUsersToGame(List<User> _users)
+        {
+            // add checks if I'm allowed to add the users of if it is allowed to add the users given the user count on the game
+            // return false;
+
+            // add users to the game that do not already exist
+            foreach (var user in _users)
+            {
+                if (!this.Users.Contains(user))
+                {
+                    this.Users.Add(user);
+                    if (this.Users.Count > this.MaxPlayers)
+                        return false;
+                }
+            }
+            return true;
+        }
     }
 }

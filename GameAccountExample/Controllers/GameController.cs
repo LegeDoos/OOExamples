@@ -89,10 +89,18 @@ namespace GameAccountExample.Controllers
             // declareer een instantie van het viewmodel en koppel de juiste datasource
             var playersPerGameViewModel = new PlayersPerGameViewModel();
             var theGame = db.Games.Where(g => g.GameID == gameid).Include(g => g.Users).FirstOrDefault();
+
             // add all users
             var allUsers = db.Users.ToList<User>();
-            theGame.Users = allUsers;
-            db.SaveChanges();
+            if (theGame.AddUsersToGame(allUsers))
+            {
+                db.SaveChanges();
+            }
+            else
+            {
+                // ik geef een foutmelding, kan ook eleganter worden opgelost door bijvoorbeeld een andere view te tonen
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
 
             playersPerGameViewModel.Game = theGame;
             playersPerGameViewModel.Users = playersPerGameViewModel.Game.Users;
