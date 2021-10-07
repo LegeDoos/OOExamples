@@ -57,5 +57,14 @@ namespace UnitTest
             // ik verwacht true
             Assert.IsFalse(result, "Toevoegen van 100 gebruikers mag niet aan een spel van minder spelers");
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void NullreferenceExceptionWhenNoUsers()
+        {
+            Game theGame = new Game();
+            theGame.Users = new List<User>();
+            theGame.AddUsersToGame(null);
+        }
     }
 }

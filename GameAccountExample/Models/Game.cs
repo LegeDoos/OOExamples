@@ -47,6 +47,8 @@ namespace GameAccountExample.Models
         {
             // add checks if I'm allowed to add the users of if it is allowed to add the users given the user count on the game
             // return false;
+            if (_users == null)
+                throw new NullReferenceException("Users moeten worden opgegeven!");
 
             // add users to the game that do not already exist
             foreach (var user in _users)
