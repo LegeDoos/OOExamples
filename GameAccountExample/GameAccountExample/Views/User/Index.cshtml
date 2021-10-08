@@ -21,6 +21,7 @@
             @Html.DisplayNameFor(model => model.Email)
         </th>
         <th></th>
+        <th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -34,6 +35,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Email)
         </td>
+        <td><img src="@Html.DisplayFor(modelItem => item.GravatarURL)" alt="Gravatar"></td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.UserID }) |
             @Html.ActionLink("Details", "Details", new { id=item.UserID }) |
