@@ -48,5 +48,23 @@ namespace GameAccountExample.Models
         /// The games that the user plays
         /// </summary>
         public virtual ICollection<Game> Games { get; set; }
+
+        public string GravatarURL{ 
+            get
+            {
+                    // Create MD5 Hash of email address
+                    var md5 = System.Security.Cryptography.MD5.Create();
+                    byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(this.Email.Trim().ToLower());
+                    byte[] hash = md5.ComputeHash(inputBytes);
+                    // Create lower-case hex string
+                    var sb = new System.Text.StringBuilder();
+                    for (int i = 0; i < hash.Length; i++)
+                    {
+                        sb.Append(hash[i].ToString("x2"));
+                    }
+                    // Build URL
+                    return string.Concat("http://www.gravatar.com/avatar/", sb);
+            }
+        }
     }
 }
