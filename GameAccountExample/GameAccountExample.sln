@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameAccountExample", "..\GameAccountExample\GameAccountExample\GameAccountExample.csproj", "{3A73BAA6-FC13-4835-8FC2-75A3835685E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameAccountExample.Tests", "..\GameAccountExample\UnitTest\GameAccountExample.Tests.csproj", "{43560BBF-D43F-408E-A207-0F7F20F280B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameAccountExample.Tests", "..\GameAccountExample\GameAccountExample.Tests\GameAccountExample.Tests.csproj", "{43560BBF-D43F-408E-A207-0F7F20F280B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
